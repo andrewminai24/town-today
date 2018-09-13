@@ -1,4 +1,4 @@
-import './Category';
+import Category from './Category';
 
 class User {
 

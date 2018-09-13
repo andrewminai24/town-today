@@ -1,4 +1,4 @@
-import './Item';
+import Item from './Item';
 
 // TODO: Use a doubly-linked list instead of an array
 

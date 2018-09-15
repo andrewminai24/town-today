@@ -17,8 +17,14 @@ class MasterList extends Component {
     }
 
     render() {
+        // TODO: Implement SectionList
+        // TODO: Use iterator and get rid of hardcoded values
         return (
-            <CategoryList items={this.state.items} />
+            <View>
+                <CategoryList categoryTitle='Movies' items={this.state.items} />
+                <CategoryList categoryTitle='Sports' items={this.state.items} />
+                <CategoryList categoryTitle='Music' items={this.state.items} />
+            </View>
         );
     }
 }

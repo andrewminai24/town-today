@@ -1,29 +1,44 @@
-// This component displays a horizontal list of Items
+// Generate a horizontal, scrollable list of events
 
 import React, { Component } from 'react';
-import { StyleSheet, View, Text, FlatList } from 'react-native';
+import { StyleSheet, FlatList, ImageBackground, Image, View } from 'react-native';
+import { Card, ListItem } from 'react-native-elements';
 
-export default class CategoryList extends Component {
-    constructor(props) {
-        super(props);
+function CategoryList(props) {
 
-    }
-
-    render() {
+    const _renderEventItem = ({ item, index }) => {
+        console.log("IMAGE: ", item.image);
+        
         return (
-            <View style={styles.container}>
-                <Text>Hi</Text>
+            <View>
+                <Image
+                    style={{ width: 200, height: 150 }}
+                    source={{ uri: item.image }}
+                />
+                <ListItem
+                    key={index}
+                    title={item.name}
+                    hideChevron={true}
+                />
             </View>
-
         );
-    }
+    };
+
+    return (
+        <Card title="CATEGORY TITLE">
+            <FlatList
+                horizontal={true}
+                data={props.items}
+                renderItem={_renderEventItem}
+                keyExtractor={item => item.id.toString()}
+            />
+        </Card>
+    );
+
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#F5FCFF',
-      }
+
 });
+
+export default CategoryList;

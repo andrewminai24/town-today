@@ -1,31 +1,30 @@
 // TODO: Think of a better name for this component...
 
-// This component displays a set of CategoryListComponents within
-// a SectionList
+// A container for a set of CategoryList components
 
 import React, { Component } from 'react';
 import { StyleSheet, View, Text, SectionList } from 'react-native';
+import CategoryList from './CategoryListComponent';
+import { ITEMS } from '../shared/MockItems';
 
-export default class MasterList extends Component {
+class MasterList extends Component {
     constructor(props) {
         super(props);
+
+        this.state = {
+            items: ITEMS
+        };
     }
 
     render() {
         return (
-            <View style={styles.container}>
-                <Text>Hi</Text>
-            </View>
-
+            <CategoryList items={this.state.items} />
         );
     }
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#F5FCFF',
-      }
+
 });
+
+export default MasterList;

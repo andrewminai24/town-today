@@ -1,28 +1,28 @@
 export const ITEMS = [
     {
         id: 1,
-        name: "Starbucks",
-        image: "https://s22.postimg.cc/j2bj1p8q9/event1.png"
+        name: "Thundervalley Casino",
+        image: "https://s26.postimg.cc/5uyysabhl/casinotiles.png"
     },
     {
         id: 2,
-        name:"Concert",
-        image: "https://s26.postimg.cc/aurtmgwvd/event2.png"
+        name:"Sac Art Show",
+        image: "https://s26.postimg.cc/za4n1a0ll/art.png"
     },
     {
         id: 3,
-        name: "Super Bowl",
-        image: "https://s26.postimg.cc/p17khosax/event3.png"
+        name: "Red Cross",
+        image: "https://s26.postimg.cc/c8o1vit89/charity.png"
     },
     {
         id: 4,
-        name: "Spiderman",
-        image: "https://s26.postimg.cc/w4ffxb5g9/event4.png"
+        name: "Dave Chapelle",
+        image: "https://s26.postimg.cc/onatvvfll/comedytiles.png"
     },
     {
         id: 5,
-        name: "Library Meetup",
-        image: "https://s26.postimg.cc/92yurkl89/event5.png"
+        name: "The Avengers",
+        image: "https://s26.postimg.cc/91tibzgix/movies.png"
     }
 ];
 

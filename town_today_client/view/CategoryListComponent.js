@@ -2,7 +2,7 @@
 
 // TODO: Cleanup unused imports
 import React, { Component } from 'react';
-import { StyleSheet, FlatList, ImageBackground, Image, View } from 'react-native';
+import { StyleSheet, FlatList, ImageBackground, Image, View, TouchableHighlight } from 'react-native';
 import { Card, ListItem } from 'react-native-elements';
 
 function CategoryList(props) {
@@ -11,17 +11,27 @@ function CategoryList(props) {
         // console.log("IMAGE: ", item.image);
 
         // TODO: ListItem is probably overkill; consider switching to Text element
+        // NOTE: It's not recommended to have Image and Text together like this
+        // TODO: TouchableHighlight working but not exactly as desired; underlay
+        //      color does not show through
         return (
             <View>
-                <Image
-                    style={{ width: 200, height: 150 }}
-                    source={{ uri: item.image }}
-                />
-                <ListItem
-                    key={index}
-                    title={item.name}
-                    hideChevron={true}
-                />
+                <TouchableHighlight
+                    onPress={() => console.log("Item Selected")}
+                    underlayColor="#ff0000"
+                >
+                    <View style={{ backgroundColor: "#0000ff" }}>
+                        <Image
+                            style={{ width: 200, height: 150 }}
+                            source={{ uri: item.image }}
+                        />
+                        <ListItem
+                            key={index}
+                            title={item.name}
+                            hideChevron={true}
+                        />
+                    </View>
+                </TouchableHighlight>
             </View>
         );
     };

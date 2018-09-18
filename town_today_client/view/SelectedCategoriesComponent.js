@@ -1,8 +1,9 @@
 // A container for a set of CategoryList components
 
 import React, { Component } from 'react';
-import { StyleSheet, ScrollView } from 'react-native';
+import { StyleSheet, ScrollView, View } from 'react-native';
 import CategoryList from './CategoryListComponent';
+import BottomBar from './BottomBarComponent';
 import { ITEMS } from '../shared/MockItems';
 
 class SelectedCategories extends Component {
@@ -14,22 +15,43 @@ class SelectedCategories extends Component {
         };
     }
 
+    static navigationOptions = {
+        title: 'Events'
+    };
+
     render() {
         // TODO: Pull data from redux store
         return (
-            <ScrollView style={styles.containerStyle}>
-                <CategoryList categoryTitle='Movies' items={this.state.items} />
-                <CategoryList categoryTitle='Sports' items={this.state.items} />
-                <CategoryList categoryTitle='Music' items={this.state.items} />
-                <CategoryList categoryTitle='Art' items={this.state.items} />
-            </ScrollView>
+            <View style={styles.viewStyle}>
+                <ScrollView style={styles.scrollViewStyle}>
+                    <CategoryList categoryTitle='Movies' items={this.state.items} />
+                    <CategoryList categoryTitle='Sports' items={this.state.items} />
+                    <CategoryList categoryTitle='Music' items={this.state.items} />
+                    <CategoryList categoryTitle='Art' items={this.state.items} />
+                </ScrollView>
+                {/* TODO: Refactor later to use props */}
+                {/* <View style={styles.bottomBarStyle}>
+                    <BottomBar />
+                </View> */}
+            </View>
         );
     }
 }
 
 const styles = StyleSheet.create({
-    containerStyle: {
+    viewStyle: {
+        flex: 1,
+        flexDirection: 'column'
+        // justifyContent: '',
+        // alignItems: ''
+    },
+    scrollViewStyle: {
+        flex: 2,
         backgroundColor: '#000'
+    },
+    bottomBarStyle: {
+        flex: 1,
+        backgroundColor: '#ff0000'
     }
 });
 

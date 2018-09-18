@@ -50,8 +50,11 @@ X 5. Get bottom menu bar stub to display correctly <<-- More or less done
 6. Finish implementing bottom menu bar
 --> Add supplied icons to each button
 --> Add event handlers to each button
+--> Style
 
 7. Integrate login screen
+--> Code added, but doesn't display correctly
+
 8. Integrate category selection screen
 9. Change drawer background color
 10. Get rid of line under category titles

@@ -29,6 +29,7 @@ class SelectedCategories extends Component {
                         <CategoryList categoryTitle='Sports' items={this.state.items} />
                         <CategoryList categoryTitle='Music' items={this.state.items} />
                         <CategoryList categoryTitle='Art' items={this.state.items} />
+                        <CategoryList categoryTitle='Dance' items={this.state.items} />
                     </ScrollView>
                 </View>
                 <View style={{flex: 1}}>

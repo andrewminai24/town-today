@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
+import LoginScreen from './login_components/LoginScreen';
 
 class Login extends Component {
     
@@ -10,9 +11,10 @@ class Login extends Component {
     render() {
         return (
             <View>
-                <Text>
+                {/* <Text>
                     Login Screen
-                </Text>
+                </Text> */}
+                <LoginScreen />
             </View>
         );
     }

@@ -43,6 +43,21 @@ export const ITEMS = [
         id: 9,
         name: "Comedy Club",
         image: "https://s26.postimg.cc/f2r7935q1/one.jpg"
+    },
+    {
+        id: 10,
+        name: "Salsa Dancing",
+        image: "https://i.postimg.cc/nczvRNmZ/two.jpg"
+    },
+    {
+        id: 11,
+        name: "Blah",
+        image: "https://i.postimg.cc/C5MjVQ6G/six.jpg"
+    },
+    {
+        id: 12,
+        name: "Something",
+        image: "https://i.postimg.cc/yYYPqkwM/four.jpg"
     }
 ];
 

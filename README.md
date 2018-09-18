@@ -6,7 +6,8 @@ The active project for the client is "town_today_client"
 
 ------------------------------------------------------------------------------
 
-To run this project.
+To run this project:
+
 First, download Android Studio and setup the emulator.
 
 Then, open the project in Android Studio by selecting 
@@ -30,3 +31,13 @@ Then, fire up the emulator and run the following commands:
 want to use the emulator. Google instructions for turning
 on developer mode on Android devices. You will also need
 to accept the RSA key and enable USB debugging).
+
+------------------------------------------------------------------------------
+
+TODOs:
+
+1. Get rid of underlay style for TouchableHighlight in CategoryListComponent?
+2. Create templates for other views: Login, CategorySelection, EventDetail
+3. Add stack navigator
+4. Add drawer navigator
+5. Implement redux store

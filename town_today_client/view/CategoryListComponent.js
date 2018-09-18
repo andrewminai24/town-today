@@ -36,7 +36,7 @@ function CategoryList(props) {
             containerStyle={styles.cardStyle}
             titleStyle={{ textAlign: 'left' }}
             // TODO: Get rid of line under title
-            dividerStyle={{ shadowColor: 'transparent' }}
+            dividerStyle={{}}
         >
             <FlatList
                 horizontal={true}

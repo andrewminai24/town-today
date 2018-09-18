@@ -44,8 +44,13 @@ TODOs:
 2. Create templates for other views: EventDetail
 3. Implement redux store
 4. Replace stand-in icon fonts in navigation drawer
-5. Get bottom menu bar stub to display correctly
+
+X 5. Get bottom menu bar stub to display correctly <<-- More or less done
+
 6. Finish implementing bottom menu bar
+--> Add supplied icons to each button
+--> Add event handlers to each button
+
 7. Integrate login screen
 8. Integrate category selection screen
 9. Change drawer background color

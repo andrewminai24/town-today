@@ -22,37 +22,25 @@ class SelectedCategories extends Component {
     render() {
         // TODO: Pull data from redux store
         return (
-            <View style={styles.viewStyle}>
-                <ScrollView style={styles.scrollViewStyle}>
-                    <CategoryList categoryTitle='Movies' items={this.state.items} />
-                    <CategoryList categoryTitle='Sports' items={this.state.items} />
-                    <CategoryList categoryTitle='Music' items={this.state.items} />
-                    <CategoryList categoryTitle='Art' items={this.state.items} />
-                </ScrollView>
-                {/* TODO: Refactor later to use props */}
-                {/* <View style={styles.bottomBarStyle}>
+            <View style={{flexDirection: 'column', flex: 1, backgroundColor: '#000'}}>
+                <View style={{flex: 8}}>
+                    <ScrollView>
+                        <CategoryList categoryTitle='Movies' items={this.state.items} />
+                        <CategoryList categoryTitle='Sports' items={this.state.items} />
+                        <CategoryList categoryTitle='Music' items={this.state.items} />
+                        <CategoryList categoryTitle='Art' items={this.state.items} />
+                    </ScrollView>
+                </View>
+                <View style={{flex: 1}}>
                     <BottomBar />
-                </View> */}
+                </View>
             </View>
         );
     }
 }
 
 const styles = StyleSheet.create({
-    viewStyle: {
-        flex: 1,
-        flexDirection: 'column'
-        // justifyContent: '',
-        // alignItems: ''
-    },
-    scrollViewStyle: {
-        flex: 2,
-        backgroundColor: '#000'
-    },
-    bottomBarStyle: {
-        flex: 1,
-        backgroundColor: '#ff0000'
-    }
+    
 });
 
 export default SelectedCategories;

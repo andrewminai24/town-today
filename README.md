@@ -36,8 +36,12 @@ to accept the RSA key and enable USB debugging).
 
 TODOs:
 
+0. Learn flexbox
 1. Get rid of underlay style for TouchableHighlight in CategoryListComponent?
-2. Create templates for other views: Login, CategorySelection, EventDetail
-3. Add stack navigator
-4. Add drawer navigator
-5. Implement redux store
+2. Create templates for other views: EventDetail
+3. Implement redux store
+4. Replace stand-in icon fonts in navigation drawer
+5. Get bottom menu bar stub to display correctly
+6. Finish implementing bottom menu bar
+7. Integrate login screen
+8. Integrate category selection screen

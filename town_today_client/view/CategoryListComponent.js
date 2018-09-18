@@ -1,19 +1,13 @@
 // Generate a horizontal, scrollable list of events
 
-// TODO: Cleanup unused imports
-import React, { Component } from 'react';
-import { StyleSheet, FlatList, ImageBackground, Image, View, TouchableHighlight } from 'react-native';
-import { Card, ListItem } from 'react-native-elements';
+import React from 'react';
+import { StyleSheet, FlatList, Image, View, TouchableHighlight } from 'react-native';
+import { Card } from 'react-native-elements';
 
 function CategoryList(props) {
 
     const _renderEventItem = ({ item, index }) => {
-        // console.log("IMAGE: ", item.image);
 
-        // TODO: ListItem is probably overkill; consider switching to Text element
-        // NOTE: It's not recommended to have Image and Text together like this
-        // TODO: TouchableHighlight working but not exactly as desired; underlay
-        //      color does not show through
         return (
             <View>
                 <TouchableHighlight
@@ -25,20 +19,21 @@ function CategoryList(props) {
                             style={{ width: 200, height: 150 }}
                             source={{ uri: item.image }}
                         />
-                        <ListItem
+                        {/* <ListItem
                             key={index}
                             title={item.name}
                             hideChevron={true}
-                        />
+                        /> */}
                     </View>
                 </TouchableHighlight>
             </View>
         );
     };
 
-    // NOTE: Notice how props are accessed in a functional, stateless component
     return (
-        <Card title={props.categoryTitle}>
+        <Card title={props.categoryTitle}
+            containerStyle={styles.cardStyle}
+            titleStyle={{ textAlign: 'left' }}>
             <FlatList
                 horizontal={true}
                 data={props.items}
@@ -51,7 +46,10 @@ function CategoryList(props) {
 }
 
 const styles = StyleSheet.create({
-
+    cardStyle: {
+        backgroundColor: '#000',
+        borderWidth: 0
+    }
 });
 
 export default CategoryList;

@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View } from 'react-native';
-import MasterList from './view/MasterListComponent';
+import SelectedCategories from './view/SelectedCategoriesComponent';
 
 export default class App extends Component {
   render() {
     return (
-      <MasterList />
+      <SelectedCategories />
     );
   }
 }

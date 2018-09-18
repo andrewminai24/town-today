@@ -37,7 +37,10 @@ to accept the RSA key and enable USB debugging).
 TODOs:
 
 0. Learn flexbox
+
 1. Get rid of underlay style for TouchableHighlight in CategoryListComponent?
+--> Make item stand out more when clicked on
+
 2. Create templates for other views: EventDetail
 3. Implement redux store
 4. Replace stand-in icon fonts in navigation drawer
@@ -45,3 +48,6 @@ TODOs:
 6. Finish implementing bottom menu bar
 7. Integrate login screen
 8. Integrate category selection screen
+9. Change drawer background color
+10. Get rid of line under category titles
+11. Replace stand-in image in drawer with Town Today logo

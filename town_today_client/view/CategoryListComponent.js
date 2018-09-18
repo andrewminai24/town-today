@@ -10,11 +10,12 @@ function CategoryList(props) {
 
         return (
             <View>
+                {/* TODO: Make item stand out more when pressed on */}
                 <TouchableHighlight
                     onPress={() => console.log("Item Selected")}
                     underlayColor="#ff0000"
                 >
-                    <View style={{ backgroundColor: "#0000ff" }}>
+                    <View style={{ backgroundColor: "#000" }}>
                         <Image
                             style={{ width: 200, height: 150 }}
                             source={{ uri: item.image }}
@@ -33,7 +34,10 @@ function CategoryList(props) {
     return (
         <Card title={props.categoryTitle}
             containerStyle={styles.cardStyle}
-            titleStyle={{ textAlign: 'left' }}>
+            titleStyle={{ textAlign: 'left' }}
+            // TODO: Get rid of line under title
+            dividerStyle={{ shadowColor: 'transparent' }}
+        >
             <FlatList
                 horizontal={true}
                 data={props.items}
@@ -48,7 +52,7 @@ function CategoryList(props) {
 const styles = StyleSheet.create({
     cardStyle: {
         backgroundColor: '#000',
-        borderWidth: 0
+        borderWidth: 0,
     }
 });
 
